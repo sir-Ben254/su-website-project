@@ -1,0 +1,38 @@
+.trail {
+    position: absolute;
+    pointer-events: none;
+    font-size: 20px;
+    animation: fadeOut Is forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+.ripple {
+    position:fixed;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(0,0,255,0.3)10%,transparent 70%);
+    border-radius: 50%;
+    animation: rippleExpand 0.8s ease-out forwards;
+    pointer-events: none;
+}
+
+@keyframes rippleExpand {
+    from {
+        transform: scale(0.1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
